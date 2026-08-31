@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:fitsSystemWindows="true"
+	android:background="@color/surface">
+
+	<com.google.android.material.appbar.MaterialToolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		app:navigationIcon="@drawable/ic_back"
+		app:title="@string/add_site" />
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:clipToPadding="false"
+		android:paddingBottom="24dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="16dp">
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/hint_site_name"
+				style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/input_name"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="text"
+					android:maxLines="1" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="12dp"
+				android:hint="@string/hint_base_url"
+				app:helperText="自动补全 https:// 并去掉末尾 /v1"
+				style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/input_base_url"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="textUri"
+					android:maxLines="1" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="12dp"
+				android:hint="@string/hint_api_key"
+				app:endIconMode="password_toggle"
+				style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/input_api_key"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="textPassword"
+					android:maxLines="1" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="24dp"
+				android:layout_marginBottom="8dp"
+				android:text="探测参数（可覆盖默认）"
+				android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+				android:textColor="@color/on_surface" />
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/hint_concurrency"
+				style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/input_concurrency"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="number"
+					android:maxLines="1" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="12dp"
+				android:hint="@string/hint_interval"
+				style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/input_interval"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="number"
+					android:maxLines="1" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="12dp"
+				android:hint="@string/hint_timeout"
+				style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/input_timeout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="number"
+					android:maxLines="1" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="12dp"
+				android:hint="@string/hint_max_tokens"
+				style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/input_max_tokens"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="number"
+					android:maxLines="1" />
+			</com.google.android.material.textfield.TextInputLayout>
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/btn_save"
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:layout_margin="16dp"
+		android:text="@string/save"
+		app:cornerRadius="16dp" />
+</LinearLayout>
