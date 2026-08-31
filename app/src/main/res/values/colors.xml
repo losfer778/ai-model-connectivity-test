@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="primary">#4355B9</color>
+	<color name="on_primary">#FFFFFF</color>
+	<color name="primary_container">#DEE0FF</color>
+	<color name="on_primary_container">#00105C</color>
+	<color name="secondary">#00696D</color>
+	<color name="on_secondary">#FFFFFF</color>
+	<color name="secondary_container">#9CF1F5</color>
+	<color name="on_secondary_container">#002021</color>
+	<color name="tertiary">#8B4D00</color>
+	<color name="error">#BA1A1A</color>
+	<color name="on_error">#FFFFFF</color>
+	<color name="error_container">#FFDAD6</color>
+	<color name="success">#146C2E</color>
+	<color name="success_container">#A6F5A9</color>
+	<color name="warning">#8B6A00</color>
+	<color name="warning_container">#FFE08A</color>
+	<color name="surface">#F7F5FF</color>
+	<color name="surface_dim">#E8E7F2</color>
+	<color name="surface_container">#F2F0FA</color>
+	<color name="surface_container_high">#ECEAF4</color>
+	<color name="surface_container_highest">#E6E4EE</color>
+	<color name="on_surface">#1B1B23</color>
+	<color name="on_surface_variant">#46464F</color>
+	<color name="outline">#767686</color>
+	<color name="outline_variant">#C7C5D0</color>
+	<color name="nav_bar">#F2F0FA</color>
+	<color name="scrim">#99000000</color>
+	<color name="avatar_1">#4355B9</color>
+	<color name="avatar_2">#00696D</color>
+	<color name="avatar_3">#8B4D00</color>
+	<color name="avatar_4">#9C4146</color>
+	<color name="avatar_5">#3B6A00</color>
+	<color name="avatar_6">#6B4EA2</color>
+</resources>
