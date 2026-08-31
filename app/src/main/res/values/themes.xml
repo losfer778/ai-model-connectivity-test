@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme.AiProbe" parent="Theme.Material3.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/primary</item>
+		<item name="colorOnPrimary">@color/on_primary</item>
+		<item name="colorPrimaryContainer">@color/primary_container</item>
+		<item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+		<item name="colorSecondary">@color/secondary</item>
+		<item name="colorOnSecondary">@color/on_secondary</item>
+		<item name="colorSecondaryContainer">@color/secondary_container</item>
+		<item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+		<item name="colorError">@color/error</item>
+		<item name="colorOnError">@color/on_error</item>
+		<item name="colorErrorContainer">@color/error_container</item>
+		<item name="colorSurface">@color/surface</item>
+		<item name="colorOnSurface">@color/on_surface</item>
+		<item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+		<item name="colorOutline">@color/outline</item>
+		<item name="android:colorBackground">@color/surface</item>
+		<item name="android:statusBarColor">@color/surface</item>
+		<item name="android:navigationBarColor">@color/nav_bar</item>
+		<item name="android:windowLightStatusBar">true</item>
+		<item name="android:windowLightNavigationBar">true</item>
+		<item name="android:windowBackground">@color/surface</item>
+		<item name="toolbarStyle">@style/Widget.AiProbe.Toolbar</item>
+		<item name="materialCardViewStyle">@style/Widget.AiProbe.Card</item>
+		<item name="bottomNavigationStyle">@style/Widget.AiProbe.BottomNav</item>
+	</style>
+
+	<style name="Widget.AiProbe.Toolbar" parent="Widget.Material3.Toolbar">
+		<item name="android:background">@color/surface</item>
+		<item name="titleTextColor">@color/on_surface</item>
+		<item name="subtitleTextColor">@color/on_surface_variant</item>
+		<item name="navigationIconTint">@color/on_surface</item>
+	</style>
+
+	<style name="Widget.AiProbe.Card" parent="Widget.Material3.CardView.Elevated">
+		<item name="cardElevation">0dp</item>
+		<item name="cardCornerRadius">20dp</item>
+		<item name="strokeWidth">1dp</item>
+		<item name="strokeColor">@color/outline_variant</item>
+		<item name="cardBackgroundColor">@color/surface_container</item>
+	</style>
+
+	<style name="Widget.AiProbe.BottomNav" parent="Widget.Material3.BottomNavigationView">
+		<item name="android:background">@color/nav_bar</item>
+		<item name="itemIconTint">@color/bottom_nav_color</item>
+		<item name="itemTextColor">@color/bottom_nav_color</item>
+		<item name="itemRippleColor">@color/primary_container</item>
+		<item name="elevation">0dp</item>
+	</style>
+
+	<style name="Text.Display" parent="TextAppearance.Material3.HeadlineMedium">
+		<item name="android:textColor">@color/on_surface</item>
+		<item name="android:fontFamily">sans-serif-medium</item>
+		<item name="android:letterSpacing">-0.02</item>
+	</style>
+
+	<style name="Text.Caption" parent="TextAppearance.Material3.BodySmall">
+		<item name="android:textColor">@color/on_surface_variant</item>
+	</style>
+</resources>
