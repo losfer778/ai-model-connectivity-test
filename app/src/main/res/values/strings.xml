@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">AI 连通测试</string>
+	<string name="tab_sites">站点</string>
+	<string name="tab_history">历史</string>
+	<string name="tab_settings">设置</string>
+	<string name="add_site">添加站点</string>
+	<string name="edit_site">编辑站点</string>
+	<string name="save">保存</string>
+	<string name="delete">删除</string>
+	<string name="cancel">取消</string>
+	<string name="hint_site_name">站点名称（可选）</string>
+	<string name="hint_base_url">API 域名，如 https://api.openai.com</string>
+	<string name="hint_api_key">API Key</string>
+	<string name="hint_concurrency">并发数量</string>
+	<string name="hint_interval">请求间隔（毫秒）</string>
+	<string name="hint_timeout">超时（毫秒）</string>
+	<string name="hint_max_tokens">最大输出 tokens</string>
+	<string name="fetch_models">一键获取模型列表</string>
+	<string name="start_test">开始连通测试</string>
+	<string name="empty_sites">还没有站点\n点右下角添加一个 OpenAI 兼容接口</string>
+	<string name="empty_history">还没有测试记录\n跑完一次测试会出现在这里</string>
+</resources>
