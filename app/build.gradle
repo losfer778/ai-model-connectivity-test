@@ -1,0 +1,73 @@
+apply plugin: "com.android.application"
+
+android {
+	buildToolsVersion "34.0.0"
+	compileSdkVersion 34
+
+	namespace "cn.losfer.aimodelsstatus"
+	defaultConfig {
+		applicationId "cn.losfer.aimodelsstatus"
+		minSdkVersion 26
+		targetSdkVersion 34
+		versionCode 1
+		versionName "1.0"
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_17
+		targetCompatibility JavaVersion.VERSION_17
+	}
+
+	signingConfigs {
+		release {
+			keyAlias "AIDE+"
+			keyPassword "123789456"
+			storePassword "123789456"
+			storeFile file("app-release.jks")
+		}
+		debug {
+			keyAlias "androiddebug"
+			keyPassword "123789456"
+			storePassword "123789456"
+			storeFile file("app-debug.jks")
+		}
+	}
+
+	buildTypes {
+		release {
+			signingConfig signingConfigs.release
+			shrinkResources false
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+
+	buildFeatures {
+		viewBinding false
+	}
+}
+
+configurations.configureEach {
+	// AIDE packages androidx.startup incompletely (missing its generated R class).
+	// This app has no StartupInitializer dependency, so exclude that optional runtime.
+	exclude group: 'androidx.startup', module: 'startup-runtime'
+	resolutionStrategy {
+		// AIDE's embedded R8 8.7 cannot dex Kotlin 1.8.x.
+		force 'org.jetbrains.kotlin:kotlin-stdlib:1.6.21'
+		force 'org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21'
+	}
+}
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	// AIDE's embedded R8 cannot package Kotlin 1.8.x artifacts.
+	// Keep this project on the Java-only AndroidX/Material line.
+	implementation 'androidx.appcompat:appcompat:1.4.2'
+	implementation 'com.google.android.material:material:1.6.1'
+	implementation 'androidx.recyclerview:recyclerview:1.2.1'
+	implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+	implementation 'androidx.fragment:fragment:1.4.1'
+
+	runtimeOnly fileTree(dir: 'runtime', include: ['*.jar'])
+	compileOnly fileTree(dir: 'provider', include: ['.jar'])
+}
