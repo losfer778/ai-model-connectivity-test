@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="12dp"
+	android:clickable="true"
+	android:focusable="true"
+	app:cardElevation="0dp"
+	app:cardCornerRadius="20dp"
+	app:strokeWidth="1dp"
+	app:strokeColor="@color/outline_variant"
+	app:cardBackgroundColor="@color/surface_container">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="16dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/title"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+				android:textColor="@color/on_surface"
+				android:maxLines="1"
+				android:ellipsize="end" />
+
+			<TextView
+				android:id="@+id/time"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="@style/Text.Caption" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="8dp"
+			android:layout_marginTop="12dp"
+			android:background="@drawable/bg_bar_track"
+			android:orientation="horizontal">
+
+			<View
+				android:id="@+id/bar_ok"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:background="@drawable/bg_bar_ok" />
+
+			<View
+				android:id="@+id/bar_fail"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:background="@drawable/bg_bar_fail" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/stat_ok"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/bg_chip_ok"
+				android:paddingStart="10dp"
+				android:paddingEnd="10dp"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:textSize="12sp"
+				android:textColor="@color/success" />
+
+			<TextView
+				android:id="@+id/stat_fail"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="8dp"
+				android:background="@drawable/bg_chip_fail"
+				android:paddingStart="10dp"
+				android:paddingEnd="10dp"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:textSize="12sp"
+				android:textColor="@color/error" />
+
+			<TextView
+				android:id="@+id/stat_duration"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="8dp"
+				android:background="@drawable/bg_chip_neutral"
+				android:paddingStart="10dp"
+				android:paddingEnd="10dp"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:textSize="12sp"
+				android:textColor="@color/on_surface_variant" />
+		</LinearLayout>
+	</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
