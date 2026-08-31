@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="primary">#BAC3FF</color>
+	<color name="on_primary">#08218A</color>
+	<color name="primary_container">#293CA0</color>
+	<color name="on_primary_container">#DEE0FF</color>
+	<color name="secondary">#80D4D8</color>
+	<color name="on_secondary">#003738</color>
+	<color name="secondary_container">#004F52</color>
+	<color name="on_secondary_container">#9CF1F5</color>
+	<color name="tertiary">#FFB86A</color>
+	<color name="error">#FFB4AB</color>
+	<color name="on_error">#690005</color>
+	<color name="error_container">#93000A</color>
+	<color name="success">#8BDA8F</color>
+	<color name="success_container">#005318</color>
+	<color name="warning">#E9C349</color>
+	<color name="warning_container">#554400</color>
+	<color name="surface">#131318</color>
+	<color name="surface_dim">#131318</color>
+	<color name="surface_container">#1F1F26</color>
+	<color name="surface_container_high">#2A2A31</color>
+	<color name="surface_container_highest">#35343C</color>
+	<color name="on_surface">#E4E1EC</color>
+	<color name="on_surface_variant">#C7C5D0</color>
+	<color name="outline">#91909A</color>
+	<color name="outline_variant">#46464F</color>
+	<color name="nav_bar">#1F1F26</color>
+	<color name="scrim">#99000000</color>
+</resources>
