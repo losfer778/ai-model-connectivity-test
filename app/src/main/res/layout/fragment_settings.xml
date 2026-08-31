@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingBottom="96dp"
+	android:clipToPadding="false">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="16dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="默认探测参数"
+			android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+			android:textColor="@color/on_surface"
+			android:paddingStart="4dp"
+			android:paddingBottom="8dp" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="新建站点会继承这些默认值，每个站点仍可单独覆盖。"
+			android:textAppearance="@style/Text.Caption"
+			android:paddingStart="4dp"
+			android:paddingBottom="16dp" />
+
+		<com.google.android.material.card.MaterialCardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:cardElevation="0dp"
+			app:cardCornerRadius="20dp"
+			app:strokeWidth="1dp"
+			app:strokeColor="@color/outline_variant"
+			app:cardBackgroundColor="@color/surface_container">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="16dp">
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="并发数量"
+					style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/input_concurrency"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:inputType="number"
+						android:maxLines="1" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:hint="请求间隔（毫秒）"
+					style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/input_interval"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:inputType="number"
+						android:maxLines="1" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:hint="超时（毫秒）"
+					style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/input_timeout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:inputType="number"
+						android:maxLines="1" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:hint="最大输出 tokens"
+					style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/input_max_tokens"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:inputType="number"
+						android:maxLines="1" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:hint="探测提示词"
+					style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/input_prompt"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:inputType="textMultiLine"
+						android:minLines="2" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/btn_save_defaults"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:layout_marginTop="16dp"
+					android:text="保存默认参数"
+					app:cornerRadius="16dp" />
+			</LinearLayout>
+		</com.google.android.material.card.MaterialCardView>
+
+		<com.google.android.material.card.MaterialCardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			app:cardElevation="0dp"
+			app:cardCornerRadius="20dp"
+			app:strokeWidth="1dp"
+			app:strokeColor="@color/outline_variant"
+			app:cardBackgroundColor="@color/surface_container">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="16dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="关于"
+					android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+					android:textColor="@color/on_surface" />
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:text="兼容任意 OpenAI 协议站点。添加时只需域名和 API Key，随后可拉取 /v1/models 并对每个模型调用 /v1/chat/completions 做最小连通验证。"
+					android:textAppearance="@style/Text.Caption"
+					android:lineSpacingExtra="3dp" />
+
+				<LinearLayout
+					android:id="@+id/author_row"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:layout_marginTop="16dp"
+					android:background="?attr/selectableItemBackground"
+					android:clickable="true"
+					android:focusable="true"
+					android:gravity="center_vertical"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="40dp"
+						android:layout_height="40dp"
+						android:background="@drawable/bg_avatar"
+						android:gravity="center"
+						android:text="M"
+						android:textColor="@color/on_primary"
+						android:textSize="17sp"
+						android:textStyle="bold" />
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:layout_marginStart="12dp"
+						android:orientation="vertical">
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Mr.losfer"
+							android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+							android:textColor="@color/on_surface" />
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="api.losfer.cn"
+							android:textAppearance="@style/Text.Caption" />
+					</LinearLayout>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="›"
+						android:textColor="@color/on_surface_variant"
+						android:textSize="28sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</com.google.android.material.card.MaterialCardView>
+	</LinearLayout>
+</androidx.core.widget.NestedScrollView>
